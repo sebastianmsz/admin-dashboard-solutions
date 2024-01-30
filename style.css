@@ -49,6 +49,7 @@ table {
 	--primary-color: hsl(255, 92%, 76%);
 	--secondary-color: hsl(261, 73%, 12%);
 	--ternary-color: hsl(250, 100%, 98%);
+	--shadow: rgba(100, 100, 100, 0.25) 0px 5px 10px 2px;
 	--system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-family: var(--system-ui);
 }
@@ -70,12 +71,14 @@ aside
 	color: var(--ternary-color);
 }
 aside {
-	font-weight: bold;
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
 	background-color: var(--secondary-color);
 	padding: 30px 2vw 0 2vw;
+}
+aside h2{
+	font-weight: 600;
 }
 aside ul{
 	display: flex;
@@ -83,7 +86,7 @@ aside ul{
 	gap: 10px;
 	padding-left: 15px;
 }
-a {
+aside a {
 	text-decoration: none;
 	color: var(--ternary-color);
 	display: flex;
@@ -95,3 +98,81 @@ aside img {
 	filter: invert();
 }
 /*aside*/
+
+/*header*/
+header{
+	background-color: var(--ternary-color);
+	padding: 10px 40px;
+	font-size: 1.2rem;
+	box-shadow: var(--shadow);
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+header div{
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.search-bar{
+	background-color: var(--ternary-color);
+	filter: brightness(92%);
+	border-radius: 50px;
+	width: 400px;
+	border: none;
+	height: 25px;
+	margin-left: 10px;
+}
+header .header-down{
+	align-items: center;
+}
+header img{
+	border-radius: 50px;
+}
+header button {
+	background-color: var(--secondary-color);
+	border: none;
+	border-radius: 20px;
+	padding: 10px;
+	width: 8vw;
+	min-width: 50px;
+	height: 30px;
+	color: var(--ternary-color);
+	font-size: 1rem;
+	line-height: 6px;
+	cursor: pointer;
+}
+.greeting{
+	display: grid;
+	grid-template-columns:auto auto;
+	max-width: 500px;
+	align-items: center;
+}
+.greeting img{
+	margin-right: 10px;
+	grid-row: 1 / span 2;
+}
+.greeting p{
+	align-self:self-end;
+}
+.greeting h2{
+	align-self: self-start;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+.greeting h2 a {
+	color: inherit;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	margin-top: -10px;
+}
+.greeting>img{
+	border: hsl(0, 0%, 90%) solid;
+}
+.greeting h2 a:hover{
+	text-decoration:underline;
+}
+
+/*header*/
