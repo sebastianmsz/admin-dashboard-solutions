@@ -43,3 +43,55 @@ table {
 	border-spacing: 0;
 }
 /*default styles reset*/
+
+/*global*/
+:root {
+	--primary-color: hsl(255, 92%, 76%);
+	--secondary-color: hsl(261, 73%, 12%);
+	--ternary-color: hsl(250, 100%, 98%);
+	--system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: var(--system-ui);
+}
+body{
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+}
+aside{
+	grid-row: 1 / span 2;
+}
+/*global*/
+
+/*aside*/
+aside
+.aside-header{
+	display: flex;
+	align-items: center;
+	font-size: 1.8rem;
+	color: var(--ternary-color);
+}
+aside {
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	background-color: var(--secondary-color);
+	padding: 30px 2vw 0 2vw;
+}
+aside ul{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-left: 15px;
+}
+a {
+	text-decoration: none;
+	color: var(--ternary-color);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 1.2rem;
+}
+aside img {
+	filter: invert();
+}
+/*aside*/
