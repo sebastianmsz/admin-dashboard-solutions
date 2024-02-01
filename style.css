@@ -49,7 +49,7 @@ table {
 	--primary-color: hsl(255, 92%, 76%);
 	--secondary-color: hsl(261, 73%, 12%);
 	--ternary-color: hsl(250, 100%, 98%);
-	--shadow: rgba(100, 100, 100, 0.25) 0px 5px 10px 2px;
+	--shadow: rgba(100, 100, 100, 0.25) 0px 5px 5px 1px;
 	--system-ui: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	font-family: var(--system-ui);
 	box-sizing: border-box;
@@ -187,10 +187,13 @@ main {
 	padding: 30px 20px;
 	display: grid;
 	grid-template-columns: 3fr 1fr;
+	color: hsl(0, 0%, 40%);
 }
-main>h2 {
-	font-size: 2rem;
+main h2,
+main h3{
+	color: var(--secondary-color);
 }
+
 .projects .cards-container {
 	border: 20px;
 	gap: 30px;	
@@ -200,7 +203,6 @@ main>h2 {
 .projects>h2{
 	font-size: 1.5rem;
 	font-weight: bold;
-	color: var(--secondary-color);
 	margin-bottom: 25px;
 }
 .card{
@@ -227,6 +229,7 @@ main>h2 {
 .card p {
 	color: grey;
 	line-height: 19.2px;
+	min-height: 65px;
 }
 .card .actions{
 	display: flex;
@@ -242,3 +245,49 @@ svg:active{
 	transition: 0.5;
 }
 /*main*/
+
+/*main side-content*/
+.side-content{
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto;
+}
+.announcements,
+.trending {
+	padding: 20px;
+	background-color: var(--ternary-color);
+	display: flex;
+	flex-direction: column;
+	border-radius: 20px;
+	gap: 20px;
+	box-shadow: var(--shadow);
+}
+.announcements {
+	margin-bottom: 25px;
+}
+.trending img{
+	border-radius: 50px;
+	margin-right: 10px;
+}
+.trending>div{
+	gap: 10px;
+	display: flex;
+	align-items: center;
+}
+.side-content h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+.side-content h3 {
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+.side-content .trending h3{
+	margin-bottom: 2px;
+}
+.h-divider{
+	height: 0.5px;
+	background-color: rgba(128, 128, 128, 0.521);
+}
+/*main side-content*/
